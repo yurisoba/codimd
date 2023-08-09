@@ -1,0 +1,13 @@
+image:
+  buildContext: .
+  file: hocus.Dockerfile
+tasks:
+  - name: bin/setup
+    prebuild: bin/setup
+    workspace: echo
+  - name: npm build
+    prebuild: npm run build
+    workspace: echo 
+vscode:
+  extensions:
+    - redhat.vscode-yaml
